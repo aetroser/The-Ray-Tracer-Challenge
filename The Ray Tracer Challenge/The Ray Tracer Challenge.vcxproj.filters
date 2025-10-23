@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vec.hpp">
+      <Filter>include\rtm\math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="canvas.hpp">
+      <Filter>include\rtm\core</Filter>
+    </ClInclude>
+    <ClInclude Include="intersect.hpp">
+      <Filter>include\rtm\core</Filter>
+    </ClInclude>
+    <ClInclude Include="ray.hpp">
+      <Filter>include\rtm\core</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.hpp">
+      <Filter>include\rtm\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math_utils.hpp">
+      <Filter>include\rtm\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math_tests.hpp">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="test_helpers.hpp">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="scene_object_tests.hpp">
+      <Filter>tests</Filter>
+    </ClInclude>
+    <ClInclude Include="scene_object.hpp">
+      <Filter>include\rtm\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.hpp">
+      <Filter>include\rtm\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="hit.hpp">
+      <Filter>include\rtm\core</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.hpp">
+      <Filter>include\rtm\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="lighting.hpp">
+      <Filter>include\rtm\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="material.hpp">
+      <Filter>include\rtm\scene</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{55f69ed9-1ffe-4211-8f26-ae0f9b4bc87e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{feb76475-ae1f-4370-b3fe-fcaacdc24a79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\rtm">
+      <UniqueIdentifier>{4192adb9-1f9f-4274-af26-3f99b4adabc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\rtm\scene">
+      <UniqueIdentifier>{56118613-d346-4084-92c3-a44d5a1f059c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\rtm\core">
+      <UniqueIdentifier>{5baf52d5-852d-4afc-8be7-afb221291998}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\rtm\math">
+      <UniqueIdentifier>{d293e5eb-a2ad-462c-a211-8ebd27f915d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{f5644828-9ce5-45d1-9e38-81d07e5d9e7c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
