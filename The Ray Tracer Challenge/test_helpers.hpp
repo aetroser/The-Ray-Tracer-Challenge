@@ -58,24 +58,16 @@ static constexpr void check_and_print(const Expected &expected_val,
   }
 }
 
-template <typename A, typename B>
-static constexpr void expected(const A &a, const B &b) {
-  check_and_print(a, b);
+template <typename Actual, typename Expected>
+static constexpr void expected(const Actual& actual_val, const Expected& expected_val) {
+    check_and_print(expected_val, actual_val);
 }
 
-template <typename A, typename B, typename C, typename OP>
-static constexpr void expected(OP op, const A &a, const B &b, const C &c) {
-  check_and_print(op(a, b), c);
-}
-
-template <typename A, typename B, typename OP>
-static constexpr void expected(OP op, const A &a, const B &b) {
-  check_and_print(op(a), b);
-}
-
-template <typename A, typename B>
-static constexpr void expected(B (*func)(A), const A &a, const B b) {
-  check_and_print(func(a), b);
+template <typename Callable, typename Expected, typename... Args>
+    requires std::invocable<Callable, Args...> // The C++20 constraint
+static constexpr void expected(Callable&& func, const Expected& expected_val, Args&&... args) {
+    auto actual_val = std::invoke(std::forward<Callable>(func), std::forward<Args>(args)...);
+    check_and_print(expected_val, actual_val);
 }
 
 static void perform_misc_tests() {

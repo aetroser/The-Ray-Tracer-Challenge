@@ -315,13 +315,22 @@ namespace rtm
 	}
 
 	template <size_t E, typename T>
+	struct IdentityMatrix
+	{
+		[[nodiscard]] consteval matrix<E, E, T> operator()()
+		{
+			matrix<E, E, T> temporary{};
+
+			for (size_t i = 0; i < E; ++i)
+				temporary(i, i) = static_cast<T>(1);
+			return temporary;
+		}
+	};
+
+	template <size_t E, typename T>
 	[[nodiscard]] consteval matrix<E, E, T> identity_matrix()
 	{
-		matrix<E, E, T> temporary{};
-
-		for (size_t i = 0; i < E; ++i)
-			temporary(i, i) = static_cast<T>(1);
-		return temporary;
+		return IdentityMatrix<E, T>{}();
 	}
 
 	template <size_t R, size_t C, typename T>

@@ -4,6 +4,8 @@
 #include <iostream>
 #include <memory>
 
+#include "math_tests.hpp"
+
 // Define canvas dimensions in one place for clarity and easy modification
 namespace
 {
@@ -20,7 +22,7 @@ void render(rtm::canvas<CANVAS_WIDTH, CANVAS_HEIGHT>& scene)
 
 	// A sphere at the origin
 	auto sphere = rtm::sphere::make();
-	sphere->properties.color = {1, 0.2, 1};
+	sphere->properties.color = {0.2, 0.5, 0.4};
 
 	rtm::point_light light_source{{1, 1, 1}, {-10, 10, -10, 1}};
 
@@ -85,12 +87,13 @@ void render(rtm::canvas<CANVAS_WIDTH, CANVAS_HEIGHT>& scene)
 
 int main()
 {
-	rtm::canvas<CANVAS_WIDTH, CANVAS_HEIGHT> scene{};
+	//rtm::canvas<CANVAS_WIDTH, CANVAS_HEIGHT> scene{};
 
-	render(scene);
+	//render(scene);
 
-	// rtm::testing::perform_tests();
-	// rtm::testing::perform_scene_tests();
+	rtm::testing::perform_math_tests();
+	rtm::testing::perform_scene_tests();
+	rtm::testing::perform_misc_tests();
 
 	// 91 strona lighting and shading
 

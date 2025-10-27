@@ -31,6 +31,7 @@ constexpr clr1 lighting(const material &mat, const point_light &light,
   auto reflectv = reflect(-lightv, n);
   auto reflect_dot_eye = dot_product(reflectv, eye_normal);
 
+    // C4244 Implicit conversion (const long double) -> (int)
   if (reflect_dot_eye > 0) {
     auto factor = power(reflect_dot_eye, mat.shininess);
     specular = light.intensity * mat.specular * factor;
