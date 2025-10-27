@@ -23,4 +23,4 @@ Build (short)
 Purpose and scope
 This repository exists to teach and experiment with low‑level rendering building blocks (rays, intersections, normals, and local illumination). It emphasizes clarity, numerical correctness, and incremental extensibility (for example: shadows, recursive reflections, multiple primitives, transforms, and advanced lighting models).
 
-The code in this repository is licensed under the MIT License - see LICENSE
+The code in this repository is licensed under the MIT License - see ![LICENSE](LICENSE)
