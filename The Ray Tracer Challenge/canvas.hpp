@@ -3,6 +3,7 @@
 #include "vec.hpp"
 #include <algorithm>
 #include <array>
+#include <fstream>
 #include <vector>
 
 namespace rtm {

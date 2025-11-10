@@ -11,7 +11,7 @@ class object;
 struct intersect {
   long double t{};
   // vec<4, long double> point;
-  std::weak_ptr<object> object{};
+  std::weak_ptr<object> obj{};
   // vec<4, long double> normal;
 };
 

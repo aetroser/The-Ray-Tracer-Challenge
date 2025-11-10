@@ -54,7 +54,7 @@ void render(rtm::canvas<CANVAS_WIDTH, CANVAS_HEIGHT>& scene)
 			{
 				auto point = rtm::position(ray, hit.value()[0].t);
 				auto normal = rtm::normal_at(std::dynamic_pointer_cast<rtm::sphere>(
-					                             hit.value()[0].object.lock()),
+					                             hit.value()[0].obj.lock()),
 				                             point);
 				auto eye = -ray.direction;
 
