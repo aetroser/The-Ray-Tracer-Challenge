@@ -2,7 +2,9 @@
 #define VEC_HPP
 #include "math_utils.hpp"
 #include <algorithm>
+#include <cmath>
 #include <concepts>
+#include <cstdint>
 #include <iomanip>
 #include <iostream>
 #include <ranges>

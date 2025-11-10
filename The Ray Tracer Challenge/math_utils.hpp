@@ -28,17 +28,17 @@ constexpr T c_max(T lhs, T rhs) noexcept {
   return (lhs < rhs) ? lhs : rhs;
 }
 
-template <std::floating_point T, T EPSILON = constants::EPSILON>
-[[nodiscard]] constexpr bool are_close(const T lhs, const T rhs) {
+template <std::floating_point T>
+[[nodiscard]] constexpr bool are_close(const T lhs, const T rhs, const T epsilon = static_cast<T>(constants::EPSILON)) {
   if (lhs == rhs) // exact
     return true;
 
   const T diff = rtm::c_abs(lhs - rhs); // absolute
-  if (diff <= EPSILON)
+  if (diff <= epsilon)
     return true;
 
   return diff <=
-         EPSILON * rtm::c_max(rtm::c_abs(lhs), rtm::c_abs(rhs)); // relative
+         epsilon * rtm::c_max(rtm::c_abs(lhs), rtm::c_abs(rhs)); // relative
 }
 
 [[nodiscard]] constexpr long double radians(const long double deg) {
